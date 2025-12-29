@@ -3,9 +3,9 @@ def decodeSantaPin(code):
     ret = ""
     pin_num = ""
     for i, letra in enumerate(code):
-        if code[pos_prov] == "<":
+        if code[i] == "<":
             pin_num = ret[-1:]
-        elif letra = "[":
+        elif letra == "[":
             pin_num = int(code[i+1])
             pos_prov = i + 2
             while code[pos_prov] != "]":

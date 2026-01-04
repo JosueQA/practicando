@@ -1,0 +1,75 @@
+# =========================
+# Python / Django
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Django
+db.sqlite3
+staticfiles/
+media/
+
+# Django local settings
+local_settings.py
+settings_local.py
+.env
+
+# =========================
+# Virtual environments
+# =========================
+venv/
+.venv/
+env/
+ENV/
+
+# =========================
+# Node / Frontend (Tailwind)
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build artifacts (NO subir CSS compilado en dev)
+# ⚠️ Si quieres subir output.css en producción, comenta esta línea
+backend/static/dist/
+
+# =========================
+# Tailwind
+# =========================
+.tailwind-cache/
+
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# =========================
+# WSL / Linux
+# =========================
+*.swp
+*.swo
+*~
+
+# =========================
+# Tests / Coverage
+# =========================
+.coverage
+htmlcov/
+.pytest_cache/
+
+# =========================
+# Misc
+# =========================
+.cache/
+

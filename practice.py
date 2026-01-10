@@ -1,25 +1,14 @@
-def decodeSantaPin(code):
+from datetime import datetime
+
+def timeUntilTakeOff(from_time: str, take_off_time: str) -> int:
+    print(from_time)
     
-    ret = ""
-    pin_num = ""
-    for i, letra in enumerate(code):
+    fecha = datetime.strptime(from_time, "%Y*%m*%d@%H|%M|%S NP")
 
-        if letra == "[":
-            if code[i+1] == "<":
-                pin_num = ret[-1:]
-            else:
-                pin_num = int(code[i+1])
-                pos_prov = i + 2
-                while code[pos_prov] != "]":
+    print(from_time)
+    return 0
 
-                    if code[pos_prov] == "+":
-                        pin_num = pin_num + 1
 
-                    elif code[pos_prov] == "-":
-                        pin_num = pin_num - 1
+takeoff = '2025*12*25@00|00|00 NP'
 
-                    pos_prov = pos_prov + 1 
-            ret = ret + str(pin_num)
-    print(ret)
-
-decodeSantaPin('[1++][2-][3+][<]')
+timeUntilTakeOff('2025*12*24@23|59|30 NP', takeoff)

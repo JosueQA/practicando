@@ -1,12 +1,13 @@
 from datetime import datetime
 
 def timeUntilTakeOff(from_time: str, take_off_time: str) -> int:
-    print(from_time)
     
+    tot = datetime.strptime(take_off_time, "%Y*%m*%d@%H|%M|%S NP")
     fecha = datetime.strptime(from_time, "%Y*%m*%d@%H|%M|%S NP")
 
-    print(from_time)
-    return 0
+    resul = tot - fecha
+
+    return int(resul.total_seconds())
 
 
 takeoff = '2025*12*25@00|00|00 NP'
